@@ -14,11 +14,6 @@ function App() {
     getPeople();
   }, [])
   
-
- 
-  
-
-
   return (
     <div className="App">
           <Header />
