@@ -13,7 +13,7 @@ function Peoples( { peoples } ) {
                             <h4><b>{item.name}</b></h4> 
                         </div>
                         </div>
-                )
+                ) 
             })
         }
     </div>
