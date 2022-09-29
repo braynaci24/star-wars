@@ -1,13 +1,69 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Poppins', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 22px;
+  background-color: #24292f;
+}
+
+#header .menu-item-container {
+  width: 50%;
+  margin-right: 30px;
+}
+
+#header .menu-item-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+}
+
+#header .menu-item-list li {
+  list-style: none;
+}
+
+#header .menu-item-list .menu-item-list-item {
+  text-decoration: none;
+  color: #fff;
+}
+
+#peoples-content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 1rem;
+  padding: 100px 150px;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.people-image {
+  width: 200px;
+  height: 200px;
+}
+
+@media(max-width: 768px) {
+  #header .menu-item-container {
+    width: 100%;
+  }
+
+  #peoples-content {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 18px;
+  }
 }
