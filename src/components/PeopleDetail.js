@@ -25,80 +25,67 @@ function PeopleDetail() {
             <div>
                 <h4>{peopleDetail.name}</h4>
             </div>
-            <table id="customers">
-                <thead>
+            <table id="people">
+                <tbody>
                     <tr>
-                        <th>Class</th>
-                        <th>Eye Color</th>
-                    </tr>
-                </thead>
-                    <tr>
+                        <td>Class</td>
                         <td>{peopleDetail.class ? peopleDetail.class : "none"}</td>
+                    </tr>
+                    <tr>
+                        <td>Eye Color</td>
                         <td>{peopleDetail.eyeColor ?  peopleDetail.eyeColor :"none" }</td>
                     </tr>
-                <thead>
                     <tr>
-                        <th>Gender</th>
-                        <th>Height</th>
-                    </tr>
-                </thead>
-                    <tr>
+                        <td>Gender</td>
                         <td>{peopleDetail.gender ? peopleDetail.gender: "none"}</td>
+                    </tr>
+                    <tr>
+                        <td>Height</td>
                         <td>{peopleDetail.height? peopleDetail.height: "none"}</td>
                     </tr>
-                <thead>
                     <tr>
-                        <th>Home World</th>
-                        <th>Manufacturer</th>
-                    </tr>
-                </thead>
-                    <tr>
+                        <td>Home World</td>
                         <td>{peopleDetail.homeworld ? peopleDetail.homeworld : "none"}</td>
+                    </tr>
+                    <tr>
+                        <td>Manufacturer</td>
                         <td>{peopleDetail.manufacturer ? peopleDetail.manufacturer: "none"}</td>
                     </tr>
-                <thead>
                     <tr>
-                        <th>Mass</th>
-                        <th>Model</th>
-                    </tr>
-                </thead>
-                    <tr>
+                        <td>Mass</td>
                         <td>{peopleDetail.mass ? peopleDetail.mass : "none"}</td>
+                    </tr>
+                    <tr>
+                        <td>Model</td>
                         <td>{peopleDetail.model ? peopleDetail.model: "none"}</td>
                     </tr>
-                <thead>
                     <tr>
-                        <th>Plating Color</th>
-                        <th>Product Line</th>
-                    </tr>
-                </thead>
-                    <tr>
+                        <td>Plating Color</td>
                         <td>{peopleDetail.platingColor ? peopleDetail.platingColor: "none"}</td>
+                    </tr>
+                    <tr>
+                        <td>Product Line</td>
                         <td>{peopleDetail.productLine ? peopleDetail.productLine: "none"}</td>
                     </tr>
-                <thead>
                     <tr>
-                        <th>Sensor Color</th>
-                        <th>Skin Color</th>
-                    </tr>
-                </thead>
-                    <tr>
+                        <td>Sensor Color</td>
                         <td>{peopleDetail.sensorColor ? peopleDetail.sensorColor: "none"}</td>
+                    </tr>
+                    <tr>
+                        <td>Skin Color</td>
                         <td>{peopleDetail.skinColor ? peopleDetail.skinColor: "none"}</td>
                     </tr>
-                <thead>
                     <tr>
-                        <th>Species</th>
-                        <th>Wiki</th>
-                    </tr>
-                </thead>
-                    <tr>
+                        <td>Species</td>
                         <td>{peopleDetail.species ? peopleDetail.species: "none"}</td>
+                    </tr>
+                    <tr>
+                        <td>Wiki</td>
                         <td><a href={peopleDetail.wiki} target="_blank" rel="noreferrer">{peopleDetail.wiki ? peopleDetail.wiki: "none"}</a></td>
                     </tr>
-                </table>
+                </tbody>
+            </table>
          </div>
-         
         }
     </>
   )
