@@ -1,5 +1,6 @@
 import React from 'react'
 import Logo from '../components/star-wars-logo.png';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
@@ -13,7 +14,7 @@ function Header() {
                     <a href="/" className='menu-item-list-item'>People</a>
                 </li>
                 <li>
-                    <a href="/" className='menu-item-list-item'>Films</a>
+                    <Link to="/films" className='menu-item-list-item'>Films</Link>
                 </li>
                 <li>
                     <a href="/" className='menu-item-list-item'>Starships</a>

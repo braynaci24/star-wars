@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react'
-
+import React from 'react'
+import {Link} from "react-router-dom";
+  
 function Peoples( { peoples } ) {
 
  return (
@@ -7,12 +8,12 @@ function Peoples( { peoples } ) {
         {
             peoples.map(item => {
                 return(
-                        <div className="card" key={item.id}>
+                        <Link to={`people/${item.id}`} className="card" key={item.id}>
                             <img src={item.image} className="people-image" alt="Avatar" />
-                        <div className="container">
-                            <h4><b>{item.name}</b></h4> 
-                        </div>
-                        </div>
+                            <div className="container">
+                                <h4><b>{item.name}</b></h4> 
+                            </div>
+                        </Link>
                 ) 
             })
         }
