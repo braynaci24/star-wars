@@ -19,16 +19,21 @@ function Films() {
   return (
     <>
         <Header />
-        <div style={{padding: "100px 150px"}}>
-        {
-            films.map(films => {
-                return(
-                    <div key={films.episode_id}>
-                        {films.title}
-                    </div>
-                )
-            })
-        }
+        <div className="center-table">
+            <table id="table">
+                <tbody>
+                {
+                    films.map(films => {
+                        return(
+                            <tr key={films.episode_id}>
+                                <td>{films.title}</td>
+                                <td>{films.release_date}</td>
+                            </tr>
+                        )
+                    })
+                }
+                </tbody>
+            </table>
         </div>
 
     </>

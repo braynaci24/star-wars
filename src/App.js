@@ -1,8 +1,10 @@
-import { useEffect, useState } from 'react'
 import Header from './components/Header'
 import Peoples from './components/Peoples'
 import PeopleDetail from './components/PeopleDetail';
 import Films from './components/Films';
+import Starships from './components/Starships';
+import Planets from './components/Planets';
+
 import {
   BrowserRouter,
   Routes,
@@ -11,18 +13,6 @@ import {
 
 function App() {
 
-  const [peoples, setPeoples] = useState([]);
-
-  useEffect(() => {
-    async function getPeople() {
-      let res = await fetch('https://akabab.github.io/starwars-api/api/all.json')
-      let data = await res.json();
-      setPeoples(data);
-    } 
-    getPeople();
-  }, [])
-
-
   return (
     <div className="App">
        <BrowserRouter>
@@ -30,7 +20,7 @@ function App() {
           <Route path="/" element={
             <>
               <Header />
-              <Peoples peoples={peoples}/>
+              <Peoples />
             </>
           }>
           </Route>
@@ -40,6 +30,14 @@ function App() {
         </Route>
         <Route path="/films" element={
           <Films />
+        }>
+        </Route>
+        <Route path="/starships" element={
+          <Starships />
+        }>
+        </Route>
+        <Route path="/planets" element={
+          <Planets />
         }>
         </Route>
           </Routes>

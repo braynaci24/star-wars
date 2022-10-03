@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {Link} from "react-router-dom";
   
-function Peoples( { peoples } ) {
+function Peoples() {
+
+  const [peoples, setPeoples] = useState([]);
+
+  useEffect(() => {
+    async function getPeople() {
+      let res = await fetch('https://akabab.github.io/starwars-api/api/all.json')
+      let data = await res.json();
+      setPeoples(data);
+    } 
+    getPeople();
+  }, [])
 
  return (
+
     <div id='peoples-content'>
         {
             peoples.map(item => {

@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 function Header() {
   return (
     <div id="header">
-        <div>
+        <a href="/">
             <img src={Logo} style={{width: "150px"}} alt=""/>
-        </div>
+        </a>
         <div className='menu-item-container'>
             <ul className='menu-item-list'>
                 <li>
@@ -17,10 +17,10 @@ function Header() {
                     <Link to="/films" className='menu-item-list-item'>Films</Link>
                 </li>
                 <li>
-                    <a href="/" className='menu-item-list-item'>Starships</a>
+                    <Link to="/starships" className='menu-item-list-item'>Starships</Link>
                 </li>
                 <li>
-                    <a href="/" className='menu-item-list-item'>Planets</a>
+                    <Link to="/planets" className='menu-item-list-item'>Planets</Link>
                 </li>
             </ul>
         </div>

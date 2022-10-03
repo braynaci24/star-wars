@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom";
+import Header from './Header'
 
 function PeopleDetail() {
 
@@ -16,16 +17,14 @@ function PeopleDetail() {
   }, [])
   return (
     <>
+        <Header />
         {
          <div className="people-detail">
-            <div className="back">
-                <a href="/">Back</a>
-            </div>
             <img src={peopleDetail.image} className="people-detail-image" alt=""/>
             <div>
                 <h4>{peopleDetail.name}</h4>
             </div>
-            <table id="people">
+            <table id="table">
                 <tbody>
                     <tr>
                         <td>Class</td>
