@@ -5,15 +5,16 @@ function Planets() {
     
     const [ planets, setPlanets ] = useState([])
 
+    async function Planets() {
+        let res = await fetch("https://swapi.dev/api/planets");
+        let data = await res.json();
+        setPlanets(data.results);
+    }
+
     useEffect(() => {
-        async function Planets() {
-            let res = await fetch("https://swapi.dev/api/planets");
-            let data = await res.json();
-            setPlanets(data.results);
-            console.log(data.results)
-        }
         Planets();
     }, [])
+
   return (
     <>
         <Header />

@@ -6,13 +6,13 @@ function Starships() {
     
     const [ starships, setStarships ] = useState([])
 
+    async function Starships() {
+        let res = await fetch("https://swapi.dev/api/starships");
+        let data = await res.json();
+        setStarships(data.results);
+    }
+
     useEffect(() => {
-        async function Starships() {
-            let res = await fetch("https://swapi.dev/api/starships");
-            let data = await res.json();
-            setStarships(data.results);
-            console.log(data.results)
-        }
         Starships();
     }, [])
   return (

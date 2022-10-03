@@ -7,19 +7,21 @@ function PeopleDetail() {
   let { PeopleId } = useParams();
   const [peopleDetail, setPeopleDetail] = useState([]);
 
+  async function getDetails(){
+    let res = await fetch(`https://akabab.github.io/starwars-api/api/id/${PeopleId}.json`);
+    let data = await res.json();
+    setPeopleDetail(data);
+  }
+  
   useEffect(() => {
-    async function getDetails(){
-        let res = await fetch(`https://akabab.github.io/starwars-api/api/id/${PeopleId}.json`);
-        let data = await res.json();
-        setPeopleDetail(data);
-    }
     getDetails();
   }, [])
+
   return (
     <>
         <Header />
         {
-         <div className="people-detail">
+        <div className="people-detail">
             <img src={peopleDetail.image} className="people-detail-image" alt=""/>
             <div>
                 <h4>{peopleDetail.name}</h4>
@@ -86,7 +88,7 @@ function PeopleDetail() {
                 </tbody>
             </table>
             </div>
-         </div>
+        </div>
         }
     </>
   )

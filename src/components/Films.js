@@ -3,16 +3,15 @@ import Header from './Header'
 
 function Films() {
 
-    const [films, setFilms] = useState([]);
+    const [movies, setFilms] = useState([]);
 
+    async function films() {
+        let res = await fetch("https://swapi.dev/api/films");
+        let data = await res.json();
+        setFilms(data.results);
+    }
 
     useEffect(() => {
-        async function films() {
-            let res = await fetch("https://swapi.dev/api/films");
-            let data = await res.json();
-            setFilms(data.results);
-            console.log(data.results)
-        }
         films();
     }, [])
 
@@ -23,7 +22,7 @@ function Films() {
             <table id="table">
                 <tbody>
                 {
-                    films.map(films => {
+                    movies.map(films => {
                         return(
                             <tr key={films.episode_id}>
                                 <td>{films.title}</td>

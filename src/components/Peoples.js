@@ -5,17 +5,17 @@ function Peoples() {
 
   const [peoples, setPeoples] = useState([]);
 
+  async function getPeople() {
+    let res = await fetch('https://akabab.github.io/starwars-api/api/all.json')
+    let data = await res.json();
+    setPeoples(data);
+  } 
+  
   useEffect(() => {
-    async function getPeople() {
-      let res = await fetch('https://akabab.github.io/starwars-api/api/all.json')
-      let data = await res.json();
-      setPeoples(data);
-    } 
     getPeople();
   }, [])
 
  return (
-
     <div id='peoples-content'>
         {
             peoples.map(item => {
