@@ -110,17 +110,6 @@ body {
 
 /* DETAIL */
 
-@media(max-width: 880px) {
-  #header .menu-item-container {
-    width: 100%;
-  }
-
-  #peoples-content {
-    grid-template-columns: repeat(1, 1fr);
-    padding: 18px;
-  }
-}
-
 .center-table {
   display: flex;
   flex-direction: column;
@@ -131,4 +120,15 @@ body {
 
 .center-table #table {
   width: 50%;
+}
+
+@media(max-width: 880px) {
+  #header .menu-item-container {
+    width: 100%;
+  }
+
+  #peoples-content {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 18px;
+  }
 }
