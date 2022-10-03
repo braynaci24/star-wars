@@ -24,8 +24,9 @@ function PeopleDetail() {
             <div>
                 <h4>{peopleDetail.name}</h4>
             </div>
+            <div style={{overflow: "auto", width: "100%"}}>
             <table id="table">
-                <tbody>
+                <tbody className="detail-tbody">
                     <tr>
                         <td>Class</td>
                         <td>{peopleDetail.class ? peopleDetail.class : "none"}</td>
@@ -84,6 +85,7 @@ function PeopleDetail() {
                     </tr>
                 </tbody>
             </table>
+            </div>
          </div>
         }
     </>
